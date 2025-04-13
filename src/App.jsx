@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -26,7 +26,9 @@ function App() {
         </p>
       </div>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600">
-        <h1 className="text-white text-4xl font-bold">Tailwind CSS v4 + Vite + React</h1>
+        <h1 className="text-white text-4xl font-bold">
+          Tailwind CSS v4 + Vite + React
+        </h1>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

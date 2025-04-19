@@ -1,17 +1,18 @@
 import React from 'react'
-import store from './auth/authKitStore'
+import store from './auth/authKitStore.jsx'
 import AuthProvider from 'react-auth-kit'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Login from './pages/Login'
+import Login from './pages/Login.jsx'
 
 console.log('Login:', Login)
-console.log('Store:', store)
 
 function App() {
   return (
     <AuthProvider store={store}>
       <Router>
-        <Routes>{/* <Route path="/" element={<Login />} /> */}</Routes>
+        <Routes>
+          <Route path="/" element={<Login />} />
+        </Routes>
       </Router>
     </AuthProvider>
   )

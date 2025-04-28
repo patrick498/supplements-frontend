@@ -2,6 +2,7 @@ import React from 'react'
 import store from './auth/authKitStore.jsx'
 import AuthProvider from 'react-auth-kit'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Intakes from './pages/Intakes.jsx'
 import Login from './pages/Login.jsx'
 
 console.log('Login:', Login)
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/intakes" element={<Intakes />} />
         </Routes>
       </Router>
     </AuthProvider>

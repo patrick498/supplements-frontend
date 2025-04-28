@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import useSignIn from 'react-auth-kit/hooks/useSignIn'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
   const signIn = useSignIn()
@@ -10,6 +11,8 @@ export default function Login() {
   })
   const [error, setError] = React.useState(null)
   const baseURL = import.meta.env.VITE_API_BASE_URL
+
+  const navigate = useNavigate()
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -28,8 +31,7 @@ export default function Login() {
               userState: res.data.authUserState,
             })
           ) {
-            // Only if you are using refreshToken feature
-            // Redirect or do-something
+            navigate('/intakes')
           } else {
             throw new Error('Sign-in failed')
           }
